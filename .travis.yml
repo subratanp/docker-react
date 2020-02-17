@@ -1,11 +1,11 @@
-sudo: required
-services: 
-  - docker
+sudo:  required
+services:
+  -  docker
 
 before_install:
- -  docker build -t reacttest -f Dockerfile.dev .
+  -  docker build -t reacttest -f Dockerfile.dev .
 
- script:
-  - docker run reacttest npm run test -- -- coverage
+script:
+  -  docker run reacttest npm run test -- -- coverage
   
 
