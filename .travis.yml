@@ -3,7 +3,7 @@ services:
   -  docker
 
 before_install:
-  -  docker build -t reacttest -f .
+  -  docker build -t reacttest .
 
 script:
   -  docker run reacttest npm run test -- --coverage
